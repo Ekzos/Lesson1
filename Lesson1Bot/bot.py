@@ -1,7 +1,7 @@
 from telegram.ext import Updater, CommandHandler # Updater соединяется с Телеграмм и проверяет есть ли новые сообщения
 
 
-def starting_chart(bot, update):
+def starting_chat(bot, update):
     print('Начало чата')
 
 # ФУНКЦИЯ с минимальным телом бота: создаю бота, говорю ходить на платформу и работать бесконечно
