@@ -1,8 +1,11 @@
-from telegram.ext import Updater, CommandHandler # Updater соединяется с Телеграмм и проверяет есть ли новые сообщения
+from telegram import Update, Bot
+from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackContext # Updater соединяется с Телеграмм и проверяет есть ли новые сообщения
 
 
-def starting_chat(bot, update):
-    print('Начало чата')
+def starting_chat(update: Update, context: CallbackContext): # (bot, update) не работает, не понятно почему
+    text = 'Начало чата'
+    print(text)
+    update.message.reply_text(text)
 
 # ФУНКЦИЯ с минимальным телом бота: создаю бота, говорю ходить на платформу и работать бесконечно
 def main():
